@@ -1,0 +1,212 @@
+/* Component-specific styles for the Weather Application */
+.container {
+  padding: 60px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 44.8px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #6b21a8; /* Purple for the title to match the image */
+  text-shadow: 1px 1px 4px rgba(107, 33, 168, 0.3);
+}
+
+.input-field {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 17.6px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #a1c4fd, #d4fc79) border-box;
+  background-clip: padding-box; /* Ensures gradient doesn't affect text */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+  border: 2px solid #3b82f6;
+}
+
+.search-btn {
+  padding: 16px 32px;
+  background: linear-gradient(90deg, #fefefe, #5df0bf);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17.6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #047857);
+  transform: translateY(-2px);
+}
+
+.weather-card {
+  padding: 28.8px;
+  background: linear-gradient(135deg, #e0f2fe, #d1fae5);
+  border-radius: 16px;
+  margin-bottom: 28.8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.03);
+}
+
+.weather-card h2 {
+  font-size: 30.4px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.weather-card p {
+  font-size: 19.2px;
+  color: #4b5563;
+  margin-bottom: 9.6px;
+}
+
+.weather-card button {
+  margin-top: 12.8px;
+  padding: 12.8px 24px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.weather-card button:hover {
+  background: linear-gradient(90deg, #1e40af, #047857);
+}
+
+.saved-city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+}
+
+.saved-city:hover {
+  background: #f3f4f6;
+}
+
+.delete-btn {
+  color: #dc2626;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #b91c1c;
+}
+
+.error {
+  color: #dc2626;
+  font-weight: 500;
+  text-align: center;
+  background: #fee2e2;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.loading {
+  color: #10b981;
+  font-weight: 500;
+  text-align: center;
+  padding: 16px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Custom loading spinner */
+.loading::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #10b981;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 9.6px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 35.2px;
+    margin-bottom: 32px;
+  }
+
+  .input-field {
+    padding: 12.8px;
+    font-size: 16px;
+  }
+
+  .search-btn {
+    padding: 12.8px 24px;
+    font-size: 16px;
+  }
+
+  .weather-card {
+    padding: 19.2px;
+  }
+
+  .weather-card h2 {
+    font-size: 25.6px;
+  }
+
+  .weather-card p {
+    font-size: 17.6px;
+  }
+
+  .saved-city {
+    padding: 12.8px;
+    font-size: 16px;
+  }
+}
